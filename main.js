@@ -1,11 +1,29 @@
+// Aguarda SweetAlert2 carregar
+const loadSweetAlert = () => {
+    return new Promise((resolve) => {
+        if (typeof Swal !== 'undefined') {
+            resolve();
+        } else {
+            const checkInterval = setInterval(() => {
+                if (typeof Swal !== 'undefined') {
+                    clearInterval(checkInterval);
+                    resolve();
+                }
+            }, 100);
+        }
+    });
+};
+
 $(document).ready(function() {
     
     // ===========================
     // Máscaras de Entrada
     // ===========================
-    $('#telefone').mask('(00) 00000-0000', {
-        placeholder: '(00) 00000-0000'
-    });
+    if ($.fn.mask) {
+        $('#telefone').mask('(00) 00000-0000', {
+            placeholder: '(00) 00000-0000'
+        });
+    }
 
     // ===========================
     // Validação do Formulário
@@ -57,27 +75,34 @@ $(document).ready(function() {
             $(element).removeClass('is-invalid').addClass('is-valid');
         },
         submitHandler: function(form) {
-            // Simula envio do formulário
-            const nome = $('#nome').val();
-            const plano = $('#plano option:selected').text() || 'Não especificado';
-            
-            // Exibe mensagem de sucesso
-            Swal.fire({
-                icon: 'success',
-                title: 'Mensagem Enviada!',
-                html: `<p>Obrigado, <strong>${nome}</strong>!</p>
-                       <p>Recebemos sua solicitação para o <strong>${plano}</strong>.</p>
-                       <p>Entraremos em contato em até 24 horas!</p>`,
-                confirmButtonText: 'OK',
-                confirmButtonColor: '#ffc107',
-                customClass: {
-                    confirmButton: 'btn btn-warning'
+            // Aguarda SweetAlert carregar
+            loadSweetAlert().then(() => {
+                // Simula envio do formulário
+                const nome = $('#nome').val();
+                const plano = $('#plano option:selected').text() || 'Não especificado';
+                
+                // Exibe mensagem de sucesso
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Mensagem Enviada!',
+                        html: `<p>Obrigado, <strong>${nome}</strong>!</p>
+                               <p>Recebemos sua solicitação para o <strong>${plano}</strong>.</p>
+                               <p>Entraremos em contato em até 24 horas!</p>`,
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#ffc107',
+                        customClass: {
+                            confirmButton: 'btn btn-warning'
+                        }
+                    });
+                } else {
+                    alert(`Obrigado, ${nome}! Recebemos sua solicitação. Entraremos em contato em até 24 horas!`);
                 }
+                
+                // Limpa o formulário
+                form.reset();
+                $('.form-control').removeClass('is-valid is-invalid');
             });
-            
-            // Limpa o formulário
-            form.reset();
-            $('.form-control').removeClass('is-valid is-invalid');
         }
     });
 
@@ -205,14 +230,16 @@ $(document).ready(function() {
     $('.navbar-brand').on('click', function(e) {
         clickCount++;
         if (clickCount >= 5) {
-            // Confete só funciona se você adicionar uma biblioteca como canvas-confetti
-            // Por enquanto, apenas mostra um alerta divertido
-            Swal.fire({
-                icon: 'success',
-                title: '🎉 Você descobriu um segredo!',
-                text: 'Parabéns! Você é persistente igual um verdadeiro atleta!',
-                confirmButtonText: 'Vamos treinar!',
-                confirmButtonColor: '#ffc107'
+            loadSweetAlert().then(() => {
+                if (typeof Swal !== 'undefined') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: '🎉 Você descobriu um segredo!',
+                        text: 'Parabéns! Você é persistente igual um verdadeiro atleta!',
+                        confirmButtonText: 'Vamos treinar!',
+                        confirmButtonColor: '#ffc107'
+                    });
+                }
             });
             clickCount = 0;
         }
