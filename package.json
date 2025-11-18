@@ -1,0 +1,19 @@
+{
+  "name": "fitzone-landing-page",
+  "version": "1.0.0",
+  "description": "Landing Page para Academia FitZone - Projeto 3 EBAC",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000 -o"
+  },
+  "keywords": [
+    "landing-page",
+    "bootstrap",
+    "jquery",
+    "academia",
+    "fitness"
+  ],
+  "author": "EBAC Student",
+  "license": "MIT",
+  "dependencies": {}
+}

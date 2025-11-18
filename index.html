@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FitZone Academia - Transforme Seu Corpo e Mente</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-lightning-charge-fill text-warning"></i>
+                FitZone
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aulas">Aulas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <section id="home">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Academia">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Transforme Seu Corpo</h1>
+                        <p class="lead">A melhor academia da região com equipamentos de última geração</p>
+                        <a href="#planos" class="btn btn-warning btn-lg">Ver Planos</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Treino">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Supere Seus Limites</h1>
+                        <p class="lead">Professores qualificados e treinos personalizados</p>
+                        <a href="#contato" class="btn btn-warning btn-lg">Agende uma Aula</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80" class="d-block w-100" alt="Grupo">
+                    <div class="carousel-caption">
+                        <h1 class="display-3 fw-bold">Faça Parte do Time</h1>
+                        <p class="lead">Comunidade fitness que motiva e inspira resultados</p>
+                        <a href="#sobre" class="btn btn-warning btn-lg">Conhecer</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="Academia FitZone">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Sobre a FitZone</h2>
+                    <p class="lead text-muted mb-4">
+                        Há mais de 15 anos transformando vidas através do fitness e bem-estar.
+                    </p>
+                    <p class="mb-4">
+                        A FitZone é muito mais que uma academia. Somos uma comunidade dedicada a ajudar você a alcançar seus objetivos de saúde e fitness. Com equipamentos modernos, professores certificados e um ambiente motivador, oferecemos tudo que você precisa para sua transformação.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-warning fs-4 me-2"></i>
+                                <span>Equipamentos Modernos</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-warning fs-4 me-2"></i>
+                                <span>Professores Certificados</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-warning fs-4 me-2"></i>
+                                <span>Horários Flexíveis</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-warning fs-4 me-2"></i>
+                                <span>Acompanhamento Personalizado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="py-5">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Escolha Seu Plano</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-person fs-1 text-warning mb-3"></i>
+                            <h3 class="card-title fw-bold">Plano Básico</h3>
+                            <p class="display-4 fw-bold text-warning mb-1">R$79</p>
+                            <p class="text-muted mb-4">/mês</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Acesso à musculação</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Vestiário e armários</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> 1 avaliação física</li>
+                                <li class="mb-2 text-muted"><i class="bi bi-x"></i> Aulas coletivas</li>
+                                <li class="mb-2 text-muted"><i class="bi bi-x"></i> Personal trainer</li>
+                            </ul>
+                            <button class="btn btn-outline-warning w-100" data-bs-toggle="modal" data-bs-target="#modalContato">Assinar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border-warning hover-card position-relative">
+                        <div class="position-absolute top-0 start-50 translate-middle">
+                            <span class="badge bg-warning text-dark px-3 py-2">MAIS POPULAR</span>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-people fs-1 text-warning mb-3"></i>
+                            <h3 class="card-title fw-bold">Plano Premium</h3>
+                            <p class="display-4 fw-bold text-warning mb-1">R$129</p>
+                            <p class="text-muted mb-4">/mês</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Acesso à musculação</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Vestiário e armários</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Avaliações ilimitadas</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Aulas coletivas</li>
+                                <li class="mb-2 text-muted"><i class="bi bi-x"></i> Personal trainer</li>
+                            </ul>
+                            <button class="btn btn-warning w-100" data-bs-toggle="modal" data-bs-target="#modalContato">Assinar Agora</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm hover-card">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-star-fill fs-1 text-warning mb-3"></i>
+                            <h3 class="card-title fw-bold">Plano VIP</h3>
+                            <p class="display-4 fw-bold text-warning mb-1">R$199</p>
+                            <p class="text-muted mb-4">/mês</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Acesso à musculação</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Vestiário e armários</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Avaliações ilimitadas</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Aulas coletivas</li>
+                                <li class="mb-2"><i class="bi bi-check text-success"></i> Personal trainer 2x/semana</li>
+                            </ul>
+                            <button class="btn btn-outline-warning w-100" data-bs-toggle="modal" data-bs-target="#modalContato">Assinar Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aulas -->
+    <section id="aulas" class="py-5 bg-dark text-white">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">Nossas Aulas</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-heart-pulse fs-1 text-warning"></i>
+                        </div>
+                        <h4 class="fw-bold">Spinning</h4>
+                        <p class="text-muted">Queime calorias ao som de músicas energizantes</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-moon-stars fs-1 text-warning"></i>
+                        </div>
+                        <h4 class="fw-bold">Yoga</h4>
+                        <p class="text-muted">Encontre equilíbrio entre corpo e mente</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-fire fs-1 text-warning"></i>
+                        </div>
+                        <h4 class="fw-bold">CrossFit</h4>
+                        <p class="text-muted">Treinos intensos para resultados rápidos</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="bi bi-music-note-beamed fs-1 text-warning"></i>
+                        </div>
+                        <h4 class="fw-bold">Zumba</h4>
+                        <p class="text-muted">Dance e perca peso se divertindo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="display-5 fw-bold text-center mb-5">O Que Dizem Nossos Alunos</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Melhor decisão que tomei! Perdi 15kg em 6 meses e ganhei muito mais disposição. Os professores são incríveis!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>MC</strong>
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Maria Clara</h6>
+                                    <small class="text-muted">Aluna há 2 anos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"Ambiente motivador e equipamentos de primeira. O acompanhamento personalizado faz toda a diferença nos resultados."</p>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>RS</strong>
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Rafael Santos</h6>
+                                    <small class="text-muted">Aluno há 1 ano</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <p class="mb-3">"As aulas de spinning são viciantes! Além de emagrecer, fiz amizades incríveis. Recomendo muito!"</p>
+                            <div class="d-flex align-items-center">
+                                <div class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <strong>JO</strong>
+                                </div>
+                                <div class="ms-3">
+                                    <h6 class="mb-0 fw-bold">Juliana Oliveira</h6>
+                                    <small class="text-muted">Aluna há 6 meses</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold">Entre em Contato</h2>
+                        <p class="lead text-muted">Agende uma aula experimental gratuita ou tire suas dúvidas</p>
+                    </div>
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <form id="formContato">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="nome" class="form-label">Nome completo *</label>
+                                        <input type="text" class="form-control" id="nome" name="nome" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="telefone" class="form-label">Telefone *</label>
+                                        <input type="tel" class="form-control" id="telefone" name="telefone" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">E-mail *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="plano" class="form-label">Plano de interesse</label>
+                                        <select class="form-select" id="plano" name="plano">
+                                            <option value="">Selecione um plano</option>
+                                            <option value="basico">Plano Básico - R$79/mês</option>
+                                            <option value="premium">Plano Premium - R$129/mês</option>
+                                            <option value="vip">Plano VIP - R$199/mês</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="mensagem" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Conte-nos sobre seus objetivos..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-warning btn-lg w-100">
+                                            <i class="bi bi-send me-2"></i>Enviar Mensagem
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4 class="fw-bold mb-3">
+                        <i class="bi bi-lightning-charge-fill text-warning"></i>
+                        FitZone
+                    </h4>
+                    <p class="text-muted">Transformando vidas através do fitness desde 2010.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-warning fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-warning fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-warning fs-4"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-warning fs-4"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="fw-bold mb-3">Horário de Funcionamento</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-clock text-warning"></i> Segunda a Sexta: 6h às 23h</li>
+                        <li class="mb-2"><i class="bi bi-clock text-warning"></i> Sábado: 8h às 18h</li>
+                        <li class="mb-2"><i class="bi bi-clock text-warning"></i> Domingo: 8h às 14h</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">Contato</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="bi bi-geo-alt text-warning"></i> Rua do Fitness, 123 - Centro</li>
+                        <li class="mb-2"><i class="bi bi-telephone text-warning"></i> (11) 99999-9999</li>
+                        <li class="mb-2"><i class="bi bi-envelope text-warning"></i> contato@fitzone.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2025 FitZone Academia. Todos os direitos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Contato -->
+    <div class="modal fade" id="modalContato" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title fw-bold">Comece Sua Transformação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-3">Preencha o formulário abaixo e entraremos em contato em até 24 horas!</p>
+                    <p class="text-muted small">Ou se preferir, role para baixo e preencha o formulário de contato completo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="#contato" class="btn btn-warning" data-bs-dismiss="modal">Ir para Formulário</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- jQuery Mask Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
+    <!-- jQuery Validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/localization/messages_pt_BR.min.js"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+</body>
+</html>

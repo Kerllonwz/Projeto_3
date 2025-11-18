@@ -1,0 +1,28 @@
+# Arquivos do Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+
+# Arquivos do Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Arquivos de Build
+dist/
+build/
+.cache/
+
+# Arquivos Temporários
+*.tmp
+*.temp
+*.log
+.env
+.env.local
+
+# Vercel
+.vercel

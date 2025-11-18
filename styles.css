@@ -1,0 +1,442 @@
+/* ===========================
+   Variáveis e Reset
+   =========================== */
+:root {
+    --primary-color: #ffc107;
+    --dark-color: #212529;
+    --light-color: #f8f9fa;
+    --text-color: #333;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===========================
+   Navbar
+   =========================== */
+.navbar {
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.navbar-brand i {
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.nav-link {
+    font-weight: 600;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+    width: 80%;
+}
+
+/* ===========================
+   Carousel
+   =========================== */
+#heroCarousel .carousel-item {
+    height: 100vh;
+    min-height: 500px;
+}
+
+#heroCarousel .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    filter: brightness(0.6);
+}
+
+#heroCarousel .carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+#heroCarousel .carousel-caption h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideInDown 1s ease;
+}
+
+#heroCarousel .carousel-caption p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    animation: slideInUp 1s ease;
+}
+
+#heroCarousel .carousel-caption .btn {
+    animation: fadeIn 1.5s ease;
+    font-weight: 700;
+    padding: 12px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+    transition: var(--transition);
+}
+
+#heroCarousel .carousel-caption .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.6);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===========================
+   Seções
+   =========================== */
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.display-5 {
+    font-weight: 900;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* ===========================
+   Sobre
+   =========================== */
+#sobre img {
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+#sobre img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+#sobre .bi-check-circle-fill {
+    animation: bounceIn 0.6s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===========================
+   Planos (Cards)
+   =========================== */
+.hover-card {
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.hover-card .card-body {
+    position: relative;
+}
+
+.hover-card i {
+    transition: var(--transition);
+}
+
+.hover-card:hover i {
+    transform: scale(1.2);
+}
+
+.badge {
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   Aulas
+   =========================== */
+#aulas i {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+#aulas .text-center:hover i {
+    transform: rotateY(360deg);
+    transition: transform 0.6s ease;
+}
+
+/* ===========================
+   Depoimentos
+   =========================== */
+.bi-star-fill {
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   Formulário de Contato
+   =========================== */
+#formContato .form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+#formContato .form-control,
+#formContato .form-select {
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+#formContato .form-control:focus,
+#formContato .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+}
+
+#formContato .form-control.error {
+    border-color: #dc3545;
+}
+
+#formContato label.error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+#formContato .btn {
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+#formContato .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+}
+
+/* ===========================
+   Footer
+   =========================== */
+footer a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    transform: scale(1.2);
+    display: inline-block;
+}
+
+/* ===========================
+   Modal
+   =========================== */
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   Utilitários
+   =========================== */
+.btn-warning {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    background-color: #ffb300;
+    border-color: #ffb300;
+    color: var(--dark-color);
+}
+
+.btn-outline-warning {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-warning:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.text-warning {
+    color: var(--primary-color) !important;
+}
+
+/* ===========================
+   Responsividade
+   =========================== */
+@media (max-width: 991px) {
+    #heroCarousel .carousel-item {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    #heroCarousel .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #heroCarousel .carousel-item {
+        height: 60vh;
+        min-height: 350px;
+    }
+
+    #heroCarousel .carousel-caption h1 {
+        font-size: 2rem;
+    }
+
+    #heroCarousel .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    .display-5 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    #heroCarousel .carousel-caption h1 {
+        font-size: 1.5rem;
+    }
+
+    #heroCarousel .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    #heroCarousel .carousel-caption .btn {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===========================
+   Animações de Scroll
+   =========================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
